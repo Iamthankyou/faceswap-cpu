@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Fake Video
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <app-video></app-video>
+            </div>
+            <div class="col">
+                <br/>
+                <div class="row">
+                    <h4>Video Swap</h4>
+                </div>
+
+                <div class="card mt-3">
+                </div>
+
+                <video [src]="getVideo()"  height="300" controls></video> <br/>
+
+            </div>
+        </div>
+    </div>
+    <!--    <upload></upload>-->
+</ion-content>

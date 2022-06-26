@@ -1,0 +1,50 @@
+<ion-header auto-hide="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Hair Styles
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="container">
+        <div class="main">
+            <div class="main-main">
+                <app-style></app-style>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <ion-card-header>Style hair</ion-card-header>
+                </div>
+
+<!--                <div class="row">-->
+<!--                    <div *ngFor="let iter of list" class="col">-->
+<!--                        <div class="thumbnail">-->
+<!--                            <a href="/w3images/lights.jpg">-->
+<!--                                <img [src]="getImg1()" alt="Lights" style="width:90%">-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+                    <div class="row">
+                        <div *ngFor="let i of getNumRow()" class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                                <img (click)="clickImg(j)" *ngFor="let j of getListCol(i); index as iter"
+                                     [src]="getImg(j)"
+                                     class ="w-30 shadow-1-strong rounded mb-4 image"
+                                     alt="Boat on Calm Water"
+                                     style="margin-right: 10px"
+                                     width="30%"
+                                />
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+<!--    </div>-->
+</ion-content>

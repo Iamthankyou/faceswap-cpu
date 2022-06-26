@@ -1,0 +1,27 @@
+
+<div class="row">
+  <ion-card-header>My face</ion-card-header>
+  <div>
+    <img *ngFor='let preview of previews1' [src]="preview" class="preview">
+  </div>
+
+  <form method="post" enctype="multipart/form-data">
+
+    <label><input type="file"  accept="image/*" multiple (change)="selectFiles1($event)" >Get file</label>
+
+  </form>
+
+<!--  <div class="col-8">-->
+<!--    <label class="btn btn-default p-0">-->
+<!--      <input type="file" accept="image/*" multiple (change)="selectFiles1($event)"  class="btn btn-success btn-sm"/>-->
+<!--    </label>-->
+<!--  </div>-->
+</div>
+
+<button class="btn btn-success form-control mt-2" (click)="uploadFiles()">
+    Upload File
+</button>
+
+<button class="btn btn-success form-control mt-2" (click)="uploadFiles2()">
+  Convert All
+</button>

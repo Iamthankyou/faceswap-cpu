@@ -1,0 +1,84 @@
+<div *ngFor="let progressInfo of progressInfos" class="mb-2">
+  <div class="progress">
+    <div
+            class="progress-bar progress-bar-info progress-bar-striped"
+            role="progressbar"
+            attr.aria-valuenow="{{ progressInfo.value }}"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            [ngStyle]="{ width: progressInfo.value + '%' }"
+    >
+      {{ progressInfo.value }}%
+    </div>
+  </div>
+</div>
+
+<div class="row">
+<!--  <div class="col-8">-->
+<!--    <label class="btn btn-default p-0">-->
+<!--      <input type="file" accept="image/*" multiple (change)="selectFiles1($event)" />-->
+<!--    </label>-->
+<!--  </div>-->
+<!--  -->
+</div>
+
+<label><input type="file" class="mt-2" accept="image/*" multiple (change)="selectFiles1($event)" >Upload image Src</label>
+
+<div>
+  <img *ngFor='let preview of previews1' [src]="preview" class="preview">
+</div>
+
+<div class="row">
+<!--  <div class="col-8">-->
+<!--    <label class="btn btn-default p-0">-->
+<!--      <input type="file" accept="image/*" multiple (change)="selectFiles2($event)" />-->
+<!--    </label>-->
+<!--  </div>-->
+</div>
+
+
+<label><input type="file" class="mt-2"  accept="image/*" multiple (change)="selectFiles2($event)" >Upload image Dst</label>
+
+<div>
+  <img *ngFor='let preview of previews2' [src]="preview" class="preview">
+</div>
+
+
+
+<!--<button type="button" class="btn btn-primary">Primary</button>-->
+
+<div class="col-4">
+  <button
+          class="btn btn-success form-control mt-2"
+          [disabled]="!selectedFiles1 && !selectedFiles2"
+          (click)="uploadFiles()" style="width: 200px"
+  >
+    Swap Image
+  </button>
+</div>
+
+<!--<div *ngIf="message.length" class="alert alert-secondary my-3" role="alert">-->
+<!--  <ul *ngFor="let msg of message; let i =d index">-->
+<!--    <li>{{ msg }}</li>-->
+<!--  </ul>-->
+<!--</div>-->
+
+<!--<button-->
+<!--        class="btn btn-success"-->
+<!--        (click)="swapface()"-->
+<!--&gt;-->
+<!--  SWAPFACE-->
+<!--</button>-->
+
+<!--<div class="card mt-3">-->
+<!--  <div class="card-header">List of Images</div>-->
+<!--  <ul-->
+<!--          class="list-group list-group-flush"-->
+<!--          *ngFor="let image of imageInfos | async"-->
+<!--  >-->
+<!--    <li class="list-group-item">-->
+<!--      <p><a href="{{ image.url }}">{{ image.name }}</a></p>-->
+<!--      <img src="{{ image.url }}" alt="{{ image.name }}" height="200px" />-->
+<!--    </li>-->
+<!--  </ul>-->
+<!--</div>-->

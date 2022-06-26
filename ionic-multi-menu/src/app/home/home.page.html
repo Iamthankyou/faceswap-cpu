@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Image to image
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <app-upload></app-upload>
+            </div>
+            <div class="col">
+<!--                <label><input type="file" class="mt-2"  accept="image/*"  >SWAP FACE</label>-->
+
+                <div class="card mt-2">
+                    <div class="card-header">Image Swap</div>
+                    <img [src]="getLinkPicture()" alt=""/>
+                </div>
+<!--                <div class="card mt-3">-->
+<!--                    <div class="card-header">Image Swap</div>-->
+<!--                    <img src="/home/duy/OutSource/MobileFaceSwap/results/res/dst.png" alt="" />-->
+<!--                </div>-->
+
+
+            </div>
+        </div>
+    </div>
+<!--    <upload></upload>-->
+</ion-content>
